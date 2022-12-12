@@ -1,22 +1,16 @@
 package Extra;
 
 public class Gakusei {
-    private String gakuseki;
+    private Gakuseki gakuseki;
     private String name;
-    private int age;
+    private  Age age;
 
-    Gakusei(String gakuseki,String name,int age){
+    Gakusei(Gakuseki gakuseki,String name,Age age){
         this.gakuseki=gakuseki;
         this.name=name;
         this.age=age;
     }
-
-    protected void isAdult(){
-        if(this.age>=18){
-            System.out.println("成人");
-        }
-        else{
-            System.out.println("成人ではない");
-        }
+    public boolean isAdult(){
+        return age.isOver20();
     }
 }
